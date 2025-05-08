@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    /* 預設樣式 */
+    .headline {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .desktop-menu {
+      text-align: center;
+      display: block;
+    }
+
+    .mobil-menu {
+      text-align: center;
+      display: none;
+    }
+
+    .list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .item {
+      background-color: pink;
+      flex: 1 1 280px;
+      margin: 10px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* 桌機版樣式 */
+    @media only screen and (min-width: 1250px) {
+      .desktop-menu {
+        display: block;
+      }
+
+      .mobil-menu {
+        display: none;
+      }
+
+      .list {
+        flex-wrap: wrap;
+      }
+
+      .item {
+        width: 280px;
+      }
+    }
+
+    /* 手機版樣式 */
+    @media only screen and (max-width: 500px) {
+      .headline {
+        font-size: 20px;
+      }
+
+      .desktop-menu {
+        display: none;
+      }
+
+      .mobil-menu {
+        display: block;
+      }
+
+      .list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .item {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="headline">蠟筆小新</div>
+  <div class="desktop-menu">選項一、選項二、選項三、選項四、選項五、選項六</div>
+  <div class="mobil-menu">
+    <img src="1.png" width="30" height="30" />
+  </div>
+  <div class="list">
+    <div class="item">
+        <h2>野原新之助<h2>
+        <img src="2.jpg" alt="2">
+    </div>
+    <div class="item">
+        <h2>野原廣志<h2>
+        <img src="3.png" alt="3">
+    </div>
+    <div class="item">
+        <h2>野原美冴<h2>
+        <img src="4.png" alt="4">
+    </div>
+    <div class="item">
+        <h2>野原向日葵<h2>
+        <img src="5.jpg" alt="5">
+    </div>
+  </div>
+</body>
+</html>
